@@ -1,0 +1,50 @@
+/* Catppuccin Mocha colors are assumed from your theme */
+window {
+  margin: 5px;
+  /* Use the same transparent base as Waybar for the acrylic effect */
+  background-color: rgba(30, 30, 46, 0.80);
+  border-radius: 20px;
+  border: 2px solid #45475a; /* surface1 */
+}
+
+#input {
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 20px;
+  color: #cdd6f4; /* text */
+  background-color: #313244; /* surface0 */
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+#scroll {
+  margin: 0px 5px;
+  border: none;
+  background-color: transparent;
+}
+
+#text {
+  padding: 5px;
+  border: none;
+  color: #cdd6f4; /* text */
+}
+
+#entry:selected {
+  background-color: #585b70; /* surface2 */
+  border-radius: 10px;
+}
+
+#entry:selected #text {
+  color: #b4befe; /* lavender */
+}

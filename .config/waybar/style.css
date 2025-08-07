@@ -1,108 +1,97 @@
-/* Catppuccin Mocha Color Palette */
-@define-color rosewater #f5e0dc;
-@define-color flamingo #f2cdcd;
-@define-color pink #f5c2e7;
-@define-color mauve #cba6f7;
-@define-color red #f38ba8;
-@define-color maroon #eba0ac;
-@define-color peach #fab387;
-@define-color yellow #f9e2af;
-@define-color green #a6e3a1;
-@define-color teal #94e2d5;
-@define-color sky #89dceb;
-@define-color sapphire #74c7ec;
-@define-color blue #89b4fa;
-@define-color lavender #b4befe;
-@define-color text #cdd6f4;
-@define-color subtext1 #bac2de;
-@define-color subtext0 #a6adc8;
-@define-color overlay2 #9399b2;
-@define-color overlay1 #7f849c;
-@define-color overlay0 #6c7086;
-@define-color surface2 #585b70;
-@define-color surface1 #45475a;
-@define-color surface0 #313244;
-@define-color base #1e1e2e;
-@define-color mantle #181825;
-@define-color crust #11111b;
+/* @import "$HOME/.config/colors/colors.css" */
+@import url("/home/olavorw/.cache/wal/colors-waybar.css");
 
 * {
-  border: none;
-  border-radius: 0;
-  font-family: JetBrains Mono Nerd Font;
-  font-size: 13px;
-  min-height: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 5px;
+    min-height: 0;
 }
 
-window#waybar {
-  background-color: rgba(30, 30, 46, 0.65);
-  color: @text;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  /* This sets top-left, top-right, bottom-right, bottom-left corners */
-  border-radius: 0px 0px 15px 15px;
-  border: 1.5px solid @surface1;
-  /* The margin line has been deleted */
+window,
+tooltip {
+    background-color: @background;
 }
 
-/* Style for all modules */
-#workspaces,
-#clock,
-#battery,
-#pulseaudio,
-#network,
-#cpu,
-#memory,
-#temperature,
-#tray {
-  padding: 0 10px;
-  margin: 10px 0px; /* Vertical margin */
+#waybar {
+    background: alpha(@background, 0.6);
+    border-radius: 0;
 }
 
-/* Style for individual modules */
+#workspaces {
+    margin: 1px 0;
+}
+
 #workspaces button {
-  padding: 0 5px;
-  color: @overlay0;
+    color: @foreground;
+    border: none;
+    padding: 0 5px;
 }
-
 #workspaces button:hover {
-  background: @surface0;
+    color: @foreground;
+    transition: none;
+    border-bottom: 1px solid @color1;
+    
+    padding: 0 8px;
 }
 
-#workspaces button.focused {
-  color: @blue;
-  background: @surface1;
-  border-radius: 10px;
+#workspaces button.active {
+    color: @color1;
+    border: 2px solid @color1;
+    padding: 0 8px;
+    margin: 0 2px;
 }
 
 #workspaces button.urgent {
-  color: @red;
+    background-color: @color1;
+    padding: 0 8px;
 }
 
-#pulseaudio {
-  color: @mauve;
+#custom-power,
+#tray,
+#bluetooth,
+#network,
+#battery,
+#pulseaudio,
+#clock {
+    color: @foreground;
+    margin: 1px 0;
+    padding: 0 10px;
+}
+
+#custom-power:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#pulseaudio:hover,
+#clock:hover {
+    background-color: alpha(@select, 0.6);
+}
+
+#bluetooth {
+    color: @foreground;
 }
 
 #network {
-  color: @flamingo;
+    color: @foreground;
 }
 
 #battery {
-  color: @green;
+    color: @foreground;
+}
+
+#pulseaudio {
+    color: @foreground;
 }
 
 #clock {
-  color: @lavender;
+    margin-right: 10px;
+    color: @foreground;
 }
 
-#cpu {
-  color: @peach;
-}
-
-#memory {
-  color: @sky;
-}
-
-#temperature {
-  color: @red;
+#custom-power {
+    margin-left: 10px;
+    padding: 0px 10px 0 15px;
 }

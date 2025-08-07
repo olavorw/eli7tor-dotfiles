@@ -3,14 +3,15 @@
  
   "logo" : {
 	"color": {
-		"1": "blue"
+		"1": "white",
+		"2": "magenta"
 	}
   },
 
   "display": {
     "color": {
-       "title": "blue",
-       "keys": "blue"
+       "title": "magenta",
+       "keys": "magenta"
     }
   },
 
