@@ -3,6 +3,8 @@
     // "modules-center": [],
     "modules-right": ["tray", "bluetooth", "network", "battery", "pulseaudio", "clock"],
 
+    "autohide": true,
+
     "custom/power": {
         "format" : " ",
         "tooltip": false,

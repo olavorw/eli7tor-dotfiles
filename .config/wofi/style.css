@@ -1,10 +1,12 @@
+@import url ("/home/olavorw/.cache/wal/colors-waybar.css");
+
 /* Catppuccin Mocha colors are assumed from your theme */
 window {
   margin: 5px;
   /* Use the same transparent base as Waybar for the acrylic effect */
-  background-color: rgba(30, 30, 46, 0.80);
+  background-color: alpha(@background, 0.6);
   border-radius: 20px;
-  border: 2px solid #45475a; /* surface1 */
+  border: 2px solid @foreground; /* surface1 */
 }
 
 #input {
@@ -12,8 +14,8 @@ window {
   padding: 5px;
   border: none;
   border-radius: 20px;
-  color: #cdd6f4; /* text */
-  background-color: #313244; /* surface0 */
+  color: @foreground; /* text */
+  background-color: @background; /* surface0 */
 }
 
 #inner-box {
@@ -37,14 +39,14 @@ window {
 #text {
   padding: 5px;
   border: none;
-  color: #cdd6f4; /* text */
+  color: @foreground; /* text */
 }
 
 #entry:selected {
-  background-color: #585b70; /* surface2 */
+  background-color: alpha(foreground, 0.6); /* surface2 */
   border-radius: 10px;
 }
 
 #entry:selected #text {
-  color: #b4befe; /* lavender */
+  color: @foreground; /* lavender */
 }
